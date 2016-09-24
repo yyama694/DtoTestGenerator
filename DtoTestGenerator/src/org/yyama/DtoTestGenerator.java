@@ -25,6 +25,12 @@ public class DtoTestGenerator {
 		List<StringParts> testStrs = new ArrayList<>();
 		Field[] fields = clazz.getDeclaredFields();
 		for (Field field : fields) {
+
+			// serialVersionUIDは対象外とする。
+			if (field.getName().equals("serialVersionUID")) {
+				continue;
+			}
+
 			StringParts str = new StringParts();
 			str.fieldName = field.getName();
 
