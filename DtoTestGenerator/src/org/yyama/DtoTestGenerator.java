@@ -114,14 +114,14 @@ public class DtoTestGenerator {
 
 		// Verifyの作成
 		bw.write("// Verify" + NEW_LINE);
-		bw.write("assertEquals( act, \"" + clazz.getSimpleName() + " [");
+		bw.write("assertEquals(\"" + clazz.getSimpleName() + " [");
 		for (int i = 0; i < testStrs.size(); i++) {
 			if (i != 0) {
 				bw.write(", ");
 			}
 			bw.write(testStrs.get(i).fieldName + "=" + testStrs.get(i).value.replace("\"", ""));
 		}
-		bw.write("]\");" + NEW_LINE_D);
+		bw.write("]\", act);" + NEW_LINE_D);
 
 		// メソッドの閉じ括弧
 		bw.write("}" + NEW_LINE_D);

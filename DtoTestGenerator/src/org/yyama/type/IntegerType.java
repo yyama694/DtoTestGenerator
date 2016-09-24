@@ -27,7 +27,7 @@ public class IntegerType extends DtoTestGenType {
 	@Override
 	public String getVerifyStr() {
 		String result;
-		result = "assertEquals( act, Integer.valueOf(" + value + "));";
+		result = "assertEquals(Integer.valueOf(" + value + "), act);";
 		return result;
 	}
 

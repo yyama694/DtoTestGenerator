@@ -28,7 +28,7 @@ public class StringType extends DtoTestGenType {
 	@Override
 	public String getVerifyStr() {
 		String result;
-		result = "assertEquals( act, " + value + ");";
+		result = "assertEquals(" + value + ", act);";
 		if (pos >= 26)
 			pos = 0;
 		return result;

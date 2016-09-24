@@ -27,7 +27,7 @@ public class LongType extends DtoTestGenType {
 	@Override
 	public String getVerifyStr() {
 		String result;
-		result = "assertEquals( act, Long.valueOf(" + value + "));";
+		result = "assertEquals(Long.valueOf(" + value + "), act);";
 		return result;
 	}
 
